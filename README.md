@@ -1,38 +1,33 @@
-# wf-brand-voice
+# Webflow Brand Voice — Claude Code Skill
 
-A Claude Code skill that applies Webflow's brand voice, tone, and style guidelines to any content you write, edit, or review.
+This repo contains a skill for [Claude Code](https://claude.ai/code) that teaches Claude how Webflow writes. Once installed, you can ask Claude to write, edit, or review any content in Webflow's voice — and it'll know the rules.
 
-## What this skill does
+---
 
-The `webflow-brand-voice` skill gives Claude a deep understanding of how Webflow communicates — the personality, the rules, the things we never say — so it can write, edit, or review content that sounds unmistakably like Webflow.
+## What is a skill?
 
-Use it for:
+A skill is a markdown file that gives Claude Code a set of instructions to follow. Drop it in the right folder, and Claude will use it automatically when it's relevant, or whenever you ask.
 
-- Marketing copy, landing pages, and ads
-- Blog posts and long-form content (with AEO optimization baked in)
-- UI copy and product microcopy
-- Social posts (LinkedIn, X/Twitter, Instagram)
-- Support responses and lifecycle emails
-- Any content that needs a brand gut-check
+---
 
-## How to install
+## Installation
 
-This skill is installed per-project in Claude Code. To use it, clone or copy this repository into your project (or point Claude Code at this repo as a skill source).
+**1. Copy the skill file into your project:**
 
-### Option 1: Copy the skill file directly
-
-Copy `.claude/skills/webflow-brand-voice.md` into the `.claude/skills/` directory of any project where you want the skill available.
-
-```
+```bash
 your-project/
 └── .claude/
     └── skills/
-        └── webflow-brand-voice.md
+        └── webflow-brand-voice.md   ← copy this file here
 ```
 
-If you also want the reference files (inclusive language, tone by surface), copy the `references/` folder alongside the skill:
+That's it. Claude Code will pick it up automatically.
 
-```
+**2. (Optional) Copy the reference files too:**
+
+The skill references two supporting files for deeper guidance. If you want Claude to use them, copy the `references/` folder into your project as well:
+
+```bash
 your-project/
 ├── .claude/
 │   └── skills/
@@ -42,60 +37,41 @@ your-project/
     └── inclusive-language.md
 ```
 
-### Option 2: Use this repo as-is
+---
 
-Clone this repo and work from it directly. The skill is already in the right place.
+## How to use it
 
-```bash
-git clone <this-repo-url>
-```
+Once the skill is installed, just ask Claude naturally. Some examples:
 
-## How to use
+> "Write a LinkedIn post about our new Localization feature."
 
-Once installed, Claude will automatically apply the brand voice skill whenever the context makes it relevant. You can also invoke it explicitly:
+> "Edit this blog intro so it sounds more like Webflow."
 
-**Write new content:**
-> "Write a LinkedIn post announcing our new Localization feature. Use Webflow's voice."
+> "Does this ad copy match our brand voice? What's off?"
 
-**Edit existing content:**
-> "Edit this blog intro for brand alignment."
+> "Draft a support response for a customer who can't find the CMS."
 
-**Review for brand fit:**
-> "Does this ad copy match Webflow's voice? Flag anything that's off."
+You can also be explicit: **"Use Webflow's voice"**, **"write like Webflow"**, or **"check this against our brand guidelines"**.
 
-**Trigger phrases that activate the skill:**
-- "Write like Webflow"
-- "Use Webflow's voice"
-- "Check brand guidelines"
-- "Draft content for Webflow"
+---
 
-## What's in the skill
+## What the skill knows
 
-The skill encodes Webflow's full brand voice system:
-
-| Section | What it covers |
+| Topic | What's covered |
 |---|---|
-| **Brand personality** | The wise mentor — knowledgeable, empowering, down-to-earth, bold |
-| **Voice dimensions** | The four core traits and what each one means in practice |
-| **Voice vs. tone** | How tone shifts by audience, context, and surface |
-| **Grammar rules** | Active voice, contractions, Oxford comma, sentence case, and more |
-| **"Don't say" list** | The specific phrases and words we never use, and what to say instead |
-| **Inclusive language** | Pronouns, ableist terms, gendered language, racial/cultural language |
-| **Punctuation** | Em dashes, en dashes, ellipses, exclamation points — when and how |
-| **Capitalization** | Sentence case rules, product name capitalization, ALL CAPS policy |
-| **Emoji** | When to use them and when not to |
-| **AEO optimization** | How to structure blog content for AI-powered search |
+| Brand personality | The wise mentor — knowledgeable, empowering, down-to-earth, bold |
+| Voice vs. tone | Voice is constant; tone shifts by audience, context, and surface |
+| Grammar rules | Active voice, contractions, Oxford comma, sentence case, and more |
+| Words we don't use | Specific phrases to avoid, and what to say instead |
+| Inclusive language | Ableist, gendered, racist, and culturally appropriative terms to avoid |
+| Punctuation | Em dashes, ellipses, exclamation points — when and how |
+| Capitalization | Sentence case, product names, ALL CAPS rules |
+| Emoji | When to use them (sparingly) and when not to |
+| AEO (blog content) | How to structure posts for AI-powered search |
 
-## Reference files
+---
 
-The skill points to two supporting reference files. These are stubs — populate them with your full guidelines.
-
-| File | Purpose |
-|---|---|
-| `references/tone-by-surface.md` | Tone guidance broken down by content surface (web, social, ads, support, etc.) |
-| `references/inclusive-language.md` | Full inclusive language tables for ableist, gendered, racial, and cultural terms |
-
-## Repo structure
+## Files in this repo
 
 ```
 wf-brand-voice/
@@ -103,14 +79,17 @@ wf-brand-voice/
 │   └── skills/
 │       └── webflow-brand-voice.md   ← the skill
 ├── references/
-│   ├── tone-by-surface.md           ← tone guidance by surface (expand me)
-│   └── inclusive-language.md        ← inclusive language tables (expand me)
+│   ├── tone-by-surface.md           ← tone guidance for web, social, ads, support, etc.
+│   └── inclusive-language.md        ← full inclusive language tables
 └── README.md
 ```
 
-## Maintaining this skill
+---
 
-When Webflow's brand guidelines change, update `.claude/skills/webflow-brand-voice.md` directly. The skill is a single markdown file — no build step, no dependencies.
+## Updating the guidelines
 
-For surface-specific tone updates, edit `references/tone-by-surface.md`.
-For inclusive language updates, edit `references/inclusive-language.md`.
+Everything lives in plain markdown files — no build process, no dependencies.
+
+- **Brand voice changes** → edit `.claude/skills/webflow-brand-voice.md`
+- **Tone by surface** → edit `references/tone-by-surface.md`
+- **Inclusive language** → edit `references/inclusive-language.md`
