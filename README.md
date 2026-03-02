@@ -1,12 +1,12 @@
-# Webflow Brand Voice — Claude Code Skill
+# Webflow Brand Voice — Claude Skill
 
-This repo contains a skill for [Claude Code](https://claude.ai/code) that teaches Claude how Webflow writes. Once installed, you can ask Claude to write, edit, or review any content in Webflow's voice — and it'll know the rules.
+This repo contains a skill that teaches Claude how Webflow writes. Once installed, you can ask Claude to write, edit, or review any content in Webflow's voice — and it'll know the rules.
 
 ---
 
 ## What is a skill?
 
-A skill is a markdown file that gives Claude Code a set of instructions to follow. Drop it in the right folder, and Claude will use it automatically when it's relevant, or whenever you ask.
+A skill is a markdown file that gives Claude a set of instructions to follow. Drop it in the right folder in Claude Code or upload the skills to Claude Chat, and Claude will use it automatically when it's relevant, or whenever you ask.
 
 ---
 
