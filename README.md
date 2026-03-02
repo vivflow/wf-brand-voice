@@ -12,6 +12,8 @@ A skill is a markdown file that gives Claude Code a set of instructions to follo
 
 ## Installation
 
+### Claude Code
+
 **1. Copy the skill file into your project:**
 
 ```bash
@@ -29,13 +31,34 @@ The skill references two supporting files for deeper guidance. If you want Claud
 
 ```bash
 your-project/
-├── .claude/
-│   └── skills/
-│       └── webflow-brand-voice.md
-└── references/
-    ├── tone-by-surface.md
-    └── inclusive-language.md
+└── .claude/
+    └── skills/
+        ├── webflow-brand-voice.md
+        └── references/
+            ├── tone-by-surface.md
+            └── inclusive-language.md
 ```
+
+---
+
+### Claude Chat
+
+**1. Download this repo as a ZIP:**
+
+On this GitHub page, click the green **Code** button → **Download ZIP**, then extract it on your computer.
+
+**2. Upload the files in a Claude Chat conversation:**
+
+Go to [claude.ai](https://claude.ai), start a new chat, and attach the files you need using the paperclip icon:
+
+- **Minimum:** `.claude/skills/webflow-brand-voice.md`
+- **Recommended:** add `references/tone-by-surface.md` and `references/inclusive-language.md` for fuller guidance
+
+**3. Ask Claude to use the guidelines:**
+
+Once uploaded, Claude will have the brand voice rules in context for that conversation. You can say something like:
+
+> "I've uploaded Webflow's brand voice guidelines. Please use them for everything I ask you to write or edit in this conversation."
 
 ---
 
@@ -77,10 +100,10 @@ You can also be explicit: **"Use Webflow's voice"**, **"write like Webflow"**, o
 wf-brand-voice/
 ├── .claude/
 │   └── skills/
-│       └── webflow-brand-voice.md   ← the skill
-├── references/
-│   ├── tone-by-surface.md           ← tone guidance for web, social, ads, support, etc.
-│   └── inclusive-language.md        ← full inclusive language tables
+│       ├── webflow-brand-voice.md        ← the skill
+│       └── references/
+│           ├── tone-by-surface.md        ← tone guidance for web, social, ads, support, etc.
+│           └── inclusive-language.md     ← full inclusive language tables
 └── README.md
 ```
 
@@ -91,5 +114,5 @@ wf-brand-voice/
 Everything lives in plain markdown files — no build process, no dependencies.
 
 - **Brand voice changes** → edit `.claude/skills/webflow-brand-voice.md`
-- **Tone by surface** → edit `references/tone-by-surface.md`
-- **Inclusive language** → edit `references/inclusive-language.md`
+- **Tone by surface** → edit `.claude/skills/references/tone-by-surface.md`
+- **Inclusive language** → edit `.claude/skills/references/inclusive-language.md`
