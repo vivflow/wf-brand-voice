@@ -49,7 +49,7 @@ On this GitHub page, click the green **Code** button → **Download ZIP**, then 
 
 **2. Upload the files in Claude Chat:**
 
-Upload the files to Claude > Settings > Customize > [Skills](https://claude.ai/customize/skills)
+Upload the files to Claude > Settings > Capabilities > Customize [Skills](https://claude.ai/customize/skills)
 
 - **Minimum:** `.claude/skills/webflow-brand-voice.md`
 - **Recommended:** add `references/tone-by-surface.md` and `references/inclusive-language.md` for fuller guidance
